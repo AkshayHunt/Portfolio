@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+</div>
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -14,23 +15,16 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -46,12 +40,12 @@
         <p class="section__text__p2">Student <br>Aspriring UI UX Designer</p>
         <div class="btn-container">
           <button
-            class="btn btn-color-2"
+            class="bgit-1"
             onclick="window.open('RESUME.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="bgit-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
         </div>
@@ -86,11 +80,11 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
-                alt="Experience icon"
+                src="./assets/skills.png"
+                alt="Skills icon"
                 class="icon"
               />
-              <h3>Known Languages</h3>
+              <h3>Known Languages</h3><br>
               <p>Tamil</p><p>English(Expert)</p><p>French(Intermediate)</p>
             </div>
             <div class="details-container">
@@ -99,36 +93,31 @@
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
+              <h3>Education</h3><br>
               <p>B.E - Electronics and Communication Engineering<br /></p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              A passionate student currently pursuing my studies at Sri Krishna College Of Technology. I am looking forward to starting my professional journey and applying my skills in the field of UI/UX designing and graphical designing.
+              A passionate student currently pursuing my studies at Sri Krishna College Of Technology. I am looking forward to start my professional journey and apply my skills in the field of UI/UX designing and graphical designing.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      
     </section>
-    <section id="experience">
+    <section id="skills">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
+      <div class="skills-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Designing and Frontend Development</h2>
+            <h2 class="skills-sub-title">Designing and Frontend Development</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div id="html">
@@ -139,7 +128,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -150,7 +139,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -161,7 +150,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -172,7 +161,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -183,7 +172,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -194,12 +183,12 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Designing and Frontend Development</h2>
+            <h2 class="skills-sub-title">Designing and Frontend Development</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -210,7 +199,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -221,7 +210,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -232,7 +221,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -243,20 +232,16 @@
             </div>
           </div>
         </div>
+        
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
+      <div class="skills-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container">
             <div class="article-container">
               <img
                 src="./assets/project-1.png"
@@ -264,67 +249,67 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">E Commerence Website</h2>
-            <p>This website has been designed using Figma and has been developed by Html css and js</p><br>
+            <h2 class="skills-sub-title project-title">E Commerence Website</h2>
+            <p>This website has been designed using Figma and developed by Html, css and js</p><br>
             <div class="btn-container">
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
-              >
+              > 
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container ">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="file.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Fashion Shopping Website</h2>
-            <p>This app has been developed in html,css,js and designed using Figma</p><br>
+            <h2 class="skills-sub-title project-title">Fashion Shopping Website</h2>
+            <p>This website developed using html, css, js and designed using Figma</p><br>
             <div class="btn-container">
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container ">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
+                src="file1.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Food order Website</h2>
-            <p>This website has more unique features other than normal food ordering websites.It has been developed using html,css and js</p><br>
+            <h2 class="skills-sub-title project-title">Food order Website</h2>
+            <p>This website has more unique features than normal food ordering websites.It's been developed using html, css and js</p><br>
             <div class="btn-container">
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
+                class="bgit-1"
                 onclick="location.href='https://github.com/'"
               >
                 Live Demo
@@ -333,12 +318,7 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -367,9 +347,8 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>

@@ -5,26 +5,32 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #200808, #4d1313, #972626, #9a2828); /* Initial gradient colors */
+  background-size: 400% 400%; /* Make the background larger to animate it */
+  animation: gradient 15s ease infinite; /* Animation properties */
+  color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  color: rgb(85, 85, 85);
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* TRANSITION */
 
-a,
-.btn {
-  transition: all 300ms ease;
-}
+
 
 /* DESKTOP NAV */
 
@@ -46,9 +52,8 @@ nav {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -66,42 +71,15 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
-
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
-}
-
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: black;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -109,9 +87,9 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: white;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -122,37 +100,12 @@ a:hover {
   max-height: 300px;
 }
 
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
-  box-sizing: border-box;
   min-height: fit-content;
 }
 
@@ -211,6 +164,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  filter: invert(100%);
 }
 
 /* BUTTONS */
@@ -229,32 +183,43 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+.bgit {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
+.bgit:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.bgit-1 {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border: none;
+  border-radius: 2pc;
+}
+
+.bgit-1:hover {
+  background-color: grey;
   cursor: pointer;
 }
 
-.btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
-
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: gray;
 }
 
 .btn-color-2 {
-  background: none;
+  border-color: rgb(255, 255, 255);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: grey 0.1rem solid;
 }
 
 .btn-container {
@@ -287,20 +252,17 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+.skills-detail-container {
+  background-color: #933333;
 }
 
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  background: rgba(0, 0, 0, 0.429);
+  border-radius: 1pc;
   text-align: center;
+  box-shadow: 0 0 10px black;
 }
 
 .section-container {
@@ -314,14 +276,14 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+/* SKILLS SECTION */
 
-#experience {
+#skills {
   position: relative;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
+.skills-sub-title {
+  color: white;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -340,14 +302,13 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 48%; /* Adjusted width to fit two articles per row */
+  width: 48%;
   gap: 0.5rem;
 }
 
 article div {
   text-align: center;
 }
-
 
 /* PROJECTS SECTION */
 
@@ -356,25 +317,20 @@ article div {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: white;
+  background: inherit;
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: white;
   text-align: center;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
 }
 
 /* CONTACT */
@@ -390,11 +346,10 @@ article div {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgba(0, 0, 0, 0.429);
   margin: 2rem auto;
   padding: 0.5rem;
+  box-shadow: 0 0 10px black;
 }
 
 .contact-info-container {
@@ -407,6 +362,7 @@ article div {
 
 .contact-info-container p {
   font-size: larger;
+  color: white;
 }
 
 .contact-icon {
@@ -415,16 +371,36 @@ article div {
 
 .email-icon {
   height: 2.5rem;
+  filter: invert(100%);
 }
 
-/* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
 }
 
-footer p {
-  text-align: center;
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
 }
 
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
